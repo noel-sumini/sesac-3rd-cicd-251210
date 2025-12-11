@@ -34,6 +34,6 @@ jobs:
           key : ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/todo:latest
-            docker run -itd --network my-network --name todo-container2 -p 18888:8888 ${{ secrets.DOCKERHUB_USERNAME }}/todo:latest
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/todo:latest
+            sudo docker run -itd --network my-network --name todo-container2 -p 18888:8888 ${{ secrets.DOCKERHUB_USERNAME }}/todo:latest
 
